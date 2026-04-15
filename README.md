@@ -27,7 +27,7 @@ This repository contains:
    npm run dev
    ```
 
-Backend runs at `http://localhost:5000`.
+Backend runs at `http://localhost:5001`.
 
 ### Frontend
 
@@ -44,6 +44,13 @@ Backend runs at `http://localhost:5000`.
    ```
 
 Frontend runs at `http://localhost:3000`.
+
+Optional frontend envs (`app/.env.local`):
+
+```bash
+NEXT_PUBLIC_BACKEND_URL=http://localhost:5001
+NEXT_PUBLIC_SOCKET_URL=http://localhost:5001
+```
 
 ## 2) Health check
 

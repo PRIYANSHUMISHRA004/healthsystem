@@ -7,7 +7,7 @@ export const getSocket = (): Socket => {
     return socket;
   }
 
-  socket = io(process.env.NEXT_PUBLIC_SOCKET_URL ?? "http://localhost:5000", {
+  socket = io(process.env.NEXT_PUBLIC_SOCKET_URL ?? "http://localhost:5001", {
     transports: ["websocket"],
     autoConnect: true
   });

@@ -1,5 +1,6 @@
 import { Server as HttpServer } from "http";
 import { Server as SocketIOServer } from "socket.io";
+import { registerChatHandlers } from "./chatHandlers.js";
 
 let io: SocketIOServer | null = null;
 
@@ -27,6 +28,8 @@ export const registerSocketHandlers = (): void => {
 
   socketServer.on("connection", (socket) => {
     console.log(`Socket connected: ${socket.id}`);
+
+    registerChatHandlers(socket);
 
     socket.on("disconnect", () => {
       console.log(`Socket disconnected: ${socket.id}`);
